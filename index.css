@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Raleway", sans-serif;
+    color: #444444;
+}
+a {
+    color: #008aff;
+    text-decoration: none;
+}  
+a:hover {
+    color: #ff137d;
+    text-decoration: none;
+}  
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+section {
+    overflow: hidden;
+}
+.section-title {margin-top: 35px;
+    padding-bottom: 40px;
+}  
+.section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ff137d;
+    font-family: "Poppins", sans-serif;
+}  
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #008aff;
+    margin: 4px 10px;
+}  
+.section-title p {
+    margin: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #008aff;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #008aff, #ff137d), url(images/gallery.jpg);
+    background-blend-mode: screen;
+}
+.banner .bannerContent{
+    max-width: 700px;
+    margin-right: 20px;
+}
+.banner .bannerContent h2{
+    font-size: 3em;
+    color: #ffffff;
+}
+.banner .bannerContent p{
+    font-size: 1.2em;
+    color: #ffffff;
+}
+.banner img{
+    position: relative;
+    max-width: 350px;
+    z-index: 2;
+}
+.banner .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@media(max-width:950px){
+    .banner img{
+        display: none;
+    }    
+}
+@media(max-width:490px){
+    .banner{
+        height: fit-content;
+    }
+}
+
+.services .serviceContent{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #868484;
+    margin: 40px;
+    width: fit-content;
+    height: fit-content;
+}
+.services .serviceContent:hover{
+    border: 2px solid #ff137d;
+}
+.services .serviceContent .card-body{
+    text-align: center;
+    align-items: center;
+}
+.services .serviceContent .card-body h5{
+    font-size: 30px;
+    font-weight: 700;
+} 
+.services .serviceContent img{
+    width: 300px;
+    height: 300px;
+}
+@media(max-width:750px){
+    .services .serviceContent{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.gallery .card{
+    margin: 10px;
+}
+
+.testimonials .tes{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.testimonials .testimonialsContent h5{
+    font-weight: 700;
+}
+.testimonials .testimonialsContent img{
+    width: 240px;
+    height: 230px;
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team .member {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #343a40;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .team .member .member-info {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.2s;
+  }
+  
+  .team .member .member-info-content {
+    position: absolute;
+    left: 50px;
+    right: 0;
+    bottom: 0;
+    transition: bottom 0.4s;
+  }
+  
+  .team .member .member-info-content h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .team .member .member-info-content span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+    color: #fff;
+  }
+  
+  .team .member .social {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    transition: left ease-in-out 0.3s;
+    background: rgba(11, 35, 65, 0.5);
+    text-align: center;
+  }
+  
+  .team .member .social a {
+    transition: color 0.3s;
+    display: block;
+    color: #fff;
+    margin-top: 15px;
+  }
+  
+  .team .member .social a:hover {
+    color: #ff137d;
+  }
+  
+  .team .member .social svg {
+    font-size: 18px;
+    margin: 0 2px;
+  }
+  
+  .team .member:hover .member-info {
+    background: linear-gradient(0deg, rgba(11, 35, 65, 0.9) 0%, rgba(11, 35, 65, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+    opacity: 1;
+    transition: 0.4s;
+  }
+  
+  .team .member:hover .member-info-content {
+    bottom: 30px;
+    transition: bottom 0.4s;
+  }
+  
+  .team .member:hover .social {
+    left: 0;
+    transition: left ease-in-out 0.3s;
+  }
+
+  /*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box {
+    color: #0b2341;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 20px 0 30px 0;
+    background: #fff;
+    font-size: 32px;
+    color: #008aff;
+    border-radius: 50%;
+    padding: 8px;
+    border: 2px dotted #008aff;
+  }
+  
+  .contact .info-box h3 {
+    font-size: 20px;
+    color: #777777;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  
+  .contact .info-box p {
+    padding: 0;
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .contact .email-form {
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 30px;
+    background: #fff;
+    margin-bottom: 85px;
+  }
+  .contact .email-form input, .contact .email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .contact .email-form input:focus, .contact .email-form textarea:focus {
+    border-color: #ff137d;
+  }
+  
+  .contact .email-form input {
+    padding: 10px 15px;
+  }
+  
+  .contact .email-form textarea {
+    padding: 12px 15px;
+  }
+  
+  .contact .email-form button[type="submit"] {
+    background: #008aff;
+    border: 0;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 4px;
+    color: #fff;
+    transition: 0.4s;
+  }
+  
+  .contact .email-form button[type="submit"]:hover {
+    background: #3a9ff7;
+  }
+
+  #footer {
+    color: #ffffff;
+    font-size: 14px;
+    background: #008aff;
+  }
+  
+  #footer .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #ff137d;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+  }
+  
+  #footer .social-links a:hover {
+    background: #ffffff;
+    color: #ff137d;
+    text-decoration: none;
+  }
+  
